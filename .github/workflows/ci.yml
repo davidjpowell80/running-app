@@ -22,5 +22,10 @@ jobs:
       - run: dotnet ef migrations has-pending-model-changes --project src/RunLeague.Api
       - run: npm install --ignore-scripts
         working-directory: src/runleague-web
+      - run: npm audit --audit-level=high
+        working-directory: src/runleague-web
+      - name: Export initial dependency lock
+        run: node -e "console.log('LOCK_START'+require('fs').readFileSync('package-lock.json').toString('base64')+'LOCK_END')"
+        working-directory: src/runleague-web
       - run: npm run build
         working-directory: src/runleague-web
