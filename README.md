@@ -27,7 +27,7 @@ dotnet user-secrets set "Strava:ClientSecret" "YOUR_CLIENT_SECRET" --project src
 dotnet user-secrets set "Strava:AllowedAthleteId" "YOUR_ATHLETE_ID" --project src/RunLeague.Api
 dotnet restore
 cd src/runleague-web
-npm install
+npm ci
 npm run build
 cd ../..
 dotnet run --project src/RunLeague.Api --launch-profile https
