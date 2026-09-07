@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/RunLeague.Api/RunLeague.Api.csproj" />
+  <Project Path="tests/RunLeague.Api.Tests/RunLeague.Api.Tests.csproj" />
+</Solution>
